@@ -36,7 +36,7 @@ const Nextjs2 = ({ className }) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-color="white" stop-opacity="0" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_790_6564"
@@ -47,7 +47,7 @@ const Nextjs2 = ({ className }) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-color="white" stop-opacity="0" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>
@@ -73,19 +73,19 @@ const Reactjs = ({ className }) => (
           id="Vector_2"
           d="M50.3066 68.063C76.4333 68.063 97.6132 59.9762 97.6132 50.0005C97.6132 40.0249 76.4333 31.938 50.3066 31.938C24.1799 31.938 3 40.0249 3 50.0005C3 59.9762 24.1799 68.063 50.3066 68.063Z"
           stroke="#61DAFB"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           id="Vector_3"
           d="M34.664 59.0317C47.7274 81.6582 65.3207 95.957 73.9599 90.9692C82.5991 85.9814 79.0126 63.5956 65.9492 40.9692C52.8858 18.3428 35.2925 4.04392 26.6533 9.03175C18.0141 14.0196 21.6006 36.4053 34.664 59.0317Z"
           stroke="#61DAFB"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           id="Vector_4"
           d="M34.664 40.9692C21.6007 63.5956 18.0141 85.9814 26.6533 90.9692C35.2925 95.957 52.8859 81.6581 65.9492 59.0317C79.0126 36.4053 82.5991 14.0196 73.9599 9.03172C65.3208 4.04389 47.7274 18.3428 34.664 40.9692Z"
           stroke="#61DAFB"
-          stroke-width="5"
+          strokeWidth="5"
         />
       </g>
     </g>
@@ -146,25 +146,25 @@ const Shadcnui = ({ className }) => (
     viewBox="0 0 100 100"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={className}
+    className={`${className}`}
   >
     <g id="shadcnui">
-      <g id="shadcnui_2" clip-path="url(#clip0_790_6990)">
+      <g id="shadcnui_2" clipPath="url(#clip0_790_6990)">
         <path
           id="Vector"
           d="M81.25 49.9996L50 81.2496"
           stroke="white"
-          stroke-width="6.25"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="6.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           id="Vector_2"
           d="M75 15.6246L15.625 74.9996"
           stroke="white"
-          stroke-width="6.25"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="6.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
     </g>
@@ -220,8 +220,8 @@ const Prisma = ({ className }) => (
       <g id="prisma_2">
         <path
           id="Vector"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M9.77386 68.639C8.75652 67.0344 8.74115 64.9904 9.73424 63.3703L47.1259 2.37686C49.2057 -1.01557 54.2275 -0.718944 55.8935 2.89469L90.0526 76.9939C91.3198 79.7433 89.861 82.9781 86.961 83.8481L33.824 99.7893C31.686 100.43 29.3825 99.5711 28.1874 97.6859L9.77386 68.639ZM51.4401 20.2108C51.8004 18.4165 54.2589 18.1578 54.985 19.8377L78.5475 74.36C78.9908 75.3866 78.4389 76.5705 77.3673 76.8902L40.6538 87.8497C39.3043 88.2524 38.0116 87.0734 38.2889 85.6924L51.4401 20.2108Z"
           fill="white"
         />
@@ -286,7 +286,7 @@ const Supabase = ({ className }) => (
           id="Vector_2"
           d="M57.8941 98.3382C55.3395 101.555 50.1596 99.7927 50.0981 95.6848L49.198 35.6028H89.5971C96.9144 35.6028 100.995 44.0544 96.4454 49.7852L57.8941 98.3382Z"
           fill="url(#paint1_linear_790_7068)"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
         <path
           id="Vector_3"
@@ -304,8 +304,8 @@ const Supabase = ({ className }) => (
         y2="63.9831"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#249361" />
-        <stop offset="1" stop-color="#3ECF8E" />
+        <stop stopColor="#249361" />
+        <stop offset="1" stopColor="#3ECF8E" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_790_7068"
@@ -316,7 +316,7 @@ const Supabase = ({ className }) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-opacity="0" />
+        <stop offset="1" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

@@ -30,7 +30,7 @@ const Header = () => {
               variant="ghost"
               asChild
             >
-              <Link href="">
+              <Link href="https://github.com/Chegesam383" target="_blank">
                 <Github />
               </Link>
             </Button>
@@ -40,7 +40,10 @@ const Header = () => {
               variant="ghost"
               asChild
             >
-              <Link href="">
+              <Link
+                href="https://www.linkedin.com/in/samuel-gachuki-560567149/"
+                target="_blank"
+              >
                 <Linkedin />
               </Link>
             </Button>
