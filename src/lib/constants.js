@@ -1,15 +1,19 @@
-const typescriptIcon = "typescript.svg";
-const postgresqlIcon = "postgresql.svg";
-const nextIcon = "next2.svg";
-const prismaIcon = "prisma.svg";
-const nodeIcon = "nodejs2.svg";
-const reactIcon = "react.svg";
+export const frontendTools = [
+  { name: "nextjs2", label: "Next js" },
+  { name: "reactjs", label: "React js" },
+  { name: "typescript", label: "Typescript" },
+  { name: "tailwindcss", label: "Tailwind css" },
+  { name: "shadcnui", label: "Shadcn ui" },
+];
 
+export const backendTools = [
+  { name: "nodejs", label: "Node js" },
+  { name: "prisma", label: "Prisma ORM" },
+  { name: "postgresql", label: "Postgre SQL" },
+  { name: "supabase", label: "Supabase" },
+];
 export const tools = [
-  { src: nextIcon, name: "Next js" },
-  { src: reactIcon, name: "React js" },
-  { src: typescriptIcon, name: "Typescript" },
-  { src: nodeIcon, name: "Node js" },
-  { src: prismaIcon, name: "Prisma ORM" },
-  { src: postgresqlIcon, name: "Postgre SQL" },
+  { name: "git", label: "Git" },
+  { name: "github", label: "Github" },
+  { name: "vscode", label: "Vs code" },
 ];

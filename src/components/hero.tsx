@@ -2,19 +2,19 @@ import React from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
-import { tools } from "@/lib/constants";
-import Image from "next/image";
+import { backendTools, frontendTools, tools } from "@/lib/constants";
+import StackIcon from "tech-stack-icons";
 
 const Hero = () => {
   return (
     <div>
       <div className="mt-24 max-w-7xl mx-auto">
-        <div className="px-4 flex flex-col gap-4 md:grid  grid-cols-4 w-full h-full grid-rows-4 mt-3 container mx-auto">
+        <div className="px-4 flex flex-col gap-4 lg:grid  grid-cols-4 w-full h-full grid-rows-4 mt-3 container mx-auto">
           <Card className="col-span-2 row-span-4 py-8 px-4">
             <div className="flex gap-4 flex-wrap sm:flex-nowrap justify-center">
               <div>
                 <h6 className="text-5xl font-bold tracking-tight mb-3 gradient">
-                  Full stack web developer
+                  Fullstack Web Developer
                 </h6>
                 <p className="text-muted-foreground mb-3">
                   Lets transform your idea into a fully functional modern and
@@ -41,53 +41,63 @@ const Hero = () => {
               />
             </Button>
           </Card>
-          <Card className=" col-span-1 row-span-1 flex  p-4 gap-4 ">
-            <div className="h-3 w-3 animate-pulse bg-green-600 rounded-full"></div>
-            <p>
-              Available
-              <span className="hidden lg:inline-block">
-                {" "}
-                for work and projects
-              </span>
-            </p>
+          <Card className=" col-span-1 row-span-1 flex px-4 items-center justify-centerp-4 gap-4  p-4">
+            <div className="h-3 w-3 animate-pulse bg-green-600 rounded-full "></div>
+            <p>Available for work and projects</p>
           </Card>
           <Card className="col-span-1 row-span-1 flex items-center p-4">
-            <MapPin className="mr-3 text-red-900" /> Toronto, canada
+            <MapPin className="mr-3 text-red-900" /> Toronto, Canada
           </Card>
 
-          <Card className="col-span-2 row-span-3 flex flex-col p-4 ">
-            <h6 className="text-3xl font-bold py-4">Tech Stack</h6>
-            <div className="flex gap-6 flex-wrap">
-              {tools.map((item, index) => {
-                if (index == 3)
-                  return (
-                    <div
-                      key={item.name}
-                      className="flex items-center flex-col justify-center h-10"
-                    >
-                      <Image
-                        height={20}
-                        width={40}
-                        alt={item.name}
-                        src={item.src}
-                      />
-                      <small className="text-muted-foreground">
-                        {item.name}
-                      </small>
-                    </div>
-                  );
+          <Card className="col-span-2 row-span-3 flex flex-col py-2 px-4 ">
+            <h3 className="text-xl font-semibold "> My Tech Stack </h3>
+
+            <h4 className="font-bold mb-2 text-muted-foreground ">Frontend</h4>
+            <div className="flex gap-1 flex-wrap">
+              {frontendTools.map((item, index) => {
                 return (
                   <div
+                    className="flex  items-center gap-2 p-1 "
                     key={item.name}
-                    className="flex flex-col items-center justify-center h-10"
                   >
-                    <Image
-                      height={30}
-                      width={30}
-                      alt={item.name}
-                      src={item.src}
+                    <StackIcon
+                      name={item.name}
+                      className="h-6 dark: text-slate-400"
                     />
-                    <small className="text-muted-foreground">{item.name}</small>
+                    <p className="text-muted-foreground text-sm">
+                      {item.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+            <h3 className="font-bold my-2 text-muted-foreground "> Backend </h3>
+            <div className="flex gap-2 flex-wrap">
+              {backendTools.map((item, index) => {
+                return (
+                  <div
+                    className="flex  items-center gap-2 p-1 "
+                    key={item.name}
+                  >
+                    <StackIcon name={item.name} className="h-6" />
+                    <p className="text-muted-foreground text-sm">
+                      {item.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <h3 className="font-bold my-2 text-muted-foreground "> Tools </h3>
+            <div className="flex gap-2 flex-wrap">
+              {tools.map((item, index) => {
+                return (
+                  <div
+                    className="flex  items-center gap-2 p-1 text-sm"
+                    key={item.name}
+                  >
+                    <StackIcon name={item.name} className="h-6" />
+                    <p className="text-muted-foreground">{item.label}</p>
                   </div>
                 );
               })}
