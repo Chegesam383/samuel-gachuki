@@ -13,12 +13,12 @@ const mynerve = Mynerve({
 
 const Header = () => {
   return (
-    <header>
-      <nav className="border-foreground-muted  fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="">
+      <nav className="border-foreground-muted  md:px-8  fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex justify-between py-2  items-center container mx-auto">
           <Link
             href="/"
-            className={`text-2xl font-extrabold gradient ${mynerve.className}`}
+            className={`ml-4 text-xl md:text-2xl font-bold gradient ${mynerve.className}`}
           >
             Samuel Gachuki
           </Link>
@@ -48,7 +48,7 @@ const Header = () => {
               <Button className="ml-4 group" size="sm">
                 Contact Me
                 <ArrowRight
-                  className="-me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"
+                  className="hidden md:inline-block -me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"
                   size={16}
                   strokeWidth={2}
                   aria-hidden="true"

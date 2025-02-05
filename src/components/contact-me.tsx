@@ -33,7 +33,7 @@ export function ContactMe() {
 
   return (
     <section
-      className="flex flex-col md:flex-row gap-8 w-full max-w-4xl mx-auto my-8"
+      className="container mx-auto flex flex-col md:flex-row p-4 gap-4 lg:gap-8 w-full max-w-4xl my-8"
       id="contact-me"
     >
       <div className="md:w-2/3 space-y-4">
