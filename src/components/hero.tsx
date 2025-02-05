@@ -3,7 +3,6 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { backendTools, frontendTools, tools } from "@/lib/constants";
-import StackIcon from "tech-stack-icons";
 
 const Hero = () => {
   return (
