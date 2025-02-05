@@ -52,52 +52,43 @@ const Hero = () => {
           <Card className="col-span-2 row-span-3 flex flex-col py-2 px-4 ">
             <h3 className="text-xl font-semibold "> My Tech Stack </h3>
 
-            <h4 className="font-bold mb-2 text-muted-foreground ">Frontend</h4>
+            <h4 className="font-bold my-2 text-muted-foreground ">Frontend</h4>
             <div className="flex gap-1 flex-wrap">
-              {frontendTools.map((item, index) => {
+              {frontendTools.map((Item, index) => {
                 return (
-                  <div
-                    className="flex  items-center gap-2 p-1 "
-                    key={item.name}
-                  >
-                    <StackIcon
-                      name={item.name}
-                      className="h-6 dark: text-slate-400"
-                    />
+                  <div className="flex  items-center gap-2 p-1 " key={index}>
+                    <Item.icon className="h-7 w-7" />
                     <p className="text-muted-foreground text-sm">
-                      {item.label}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-            <h3 className="font-bold my-2 text-muted-foreground "> Backend </h3>
-            <div className="flex gap-2 flex-wrap">
-              {backendTools.map((item, index) => {
-                return (
-                  <div
-                    className="flex  items-center gap-2 p-1 "
-                    key={item.name}
-                  >
-                    <StackIcon name={item.name} className="h-6" />
-                    <p className="text-muted-foreground text-sm">
-                      {item.label}
+                      {Item.label}
                     </p>
                   </div>
                 );
               })}
             </div>
 
-            <h3 className="font-bold my-2 text-muted-foreground "> Tools </h3>
-            <div className="flex gap-2 flex-wrap">
-              {tools.map((item, index) => {
+            <h4 className="font-bold my-2 text-muted-foreground ">Backend</h4>
+            <div className="flex gap-1 flex-wrap">
+              {backendTools.map((Item, index) => {
                 return (
-                  <div
-                    className="flex  items-center gap-2 p-1 text-sm"
-                    key={item.name}
-                  >
-                    <StackIcon name={item.name} className="h-6" />
-                    <p className="text-muted-foreground">{item.label}</p>
+                  <div className="flex  items-center gap-2 p-1 " key={index}>
+                    <Item.icon className="h-7 w-7" />
+                    <p className="text-muted-foreground text-sm">
+                      {Item.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <h4 className="font-bold my-2 text-muted-foreground ">Tools</h4>
+            <div className="flex gap-1 flex-wrap">
+              {tools.map((Item, index) => {
+                return (
+                  <div className="flex  items-center gap-2 p-1 " key={index}>
+                    <Item.icon className="h-7 w-7" />
+                    <p className="text-muted-foreground text-sm">
+                      {Item.label}
+                    </p>
                   </div>
                 );
               })}
