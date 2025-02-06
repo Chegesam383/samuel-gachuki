@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="mt-24 max-w-7xl mx-auto">
         <div className="px-4 flex flex-col gap-4 lg:grid  grid-cols-4 w-full h-full grid-rows-4 mt-3 container mx-auto">
           <Card className="col-span-2 row-span-4 py-8 px-4 flex flex-col justify-between">
-            <div className="flex gap-4  flex-wrap md:flex-nowrap justify-center">
+            <div className="flex gap-4  flex-wrap md:flex-nowrap ">
               <div>
                 <h6 className="text-5xl font-bold text-wrap tracking-tight mb-3 gradient text-center md:text-left">
                   Fullstack Web Developer
