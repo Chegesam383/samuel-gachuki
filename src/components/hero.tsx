@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="py-16 max-w-6xl mx-auto px-4">
+    <section className="py-16 max-w-6xl mx-auto px-4 mt-5 sm:mt-1">
       <div className=" flex flex-col gap-4 h-full mx-auto lg:grid grid-cols-4 grid-rows-4">
         <Card className="col-span-2 row-span-4 py-8 px-4 flex flex-col justify-between">
           <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
@@ -43,7 +43,7 @@ const Hero = () => {
         <Card className="col-span-1 row-span-1 flex items-center px-2 py-4">
           <MapPin className="mr-3 text-red-900" /> Toronto, Canada
           <span className="text-muted-foreground text-sm">
-            &nbsp;&nbsp;-5 GMT
+            &nbsp;&nbsp;-5 hrs GMT
           </span>
         </Card>
 
