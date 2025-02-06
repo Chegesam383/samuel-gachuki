@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import CvContent from "./cv";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, X } from "lucide-react";
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 export default function CV() {
@@ -39,7 +39,9 @@ export default function CV() {
         {/* Dark Mode Toggle */}
         <div className="flex justify-between m-4">
           <div>
-            <DialogClose className="p-4 font-bold">X</DialogClose>
+            <DialogClose className="p-4 font-bold">
+              <X />
+            </DialogClose>
           </div>
           <div className="flex items-center">
             <Button

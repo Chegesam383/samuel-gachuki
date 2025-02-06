@@ -14,10 +14,10 @@ const Hero = () => {
           <Card className="col-span-2 row-span-4 py-8 px-4">
             <div className="flex gap-4 flex-wrap sm:flex-nowrap justify-center">
               <div>
-                <h6 className="text-5xl font-bold tracking-tight mb-3 gradient">
+                <h6 className="text-5xl font-bold tracking-tight mb-3 gradient text-center md:text-left">
                   Fullstack Web Developer
                 </h6>
-                <p className="text-muted-foreground mt-4">
+                <p className="text-muted-foreground mt-4 text-center md:text-left max-w-sm">
                   Lets transform your idea into a fully functional modern and
                   user oriented web application utilizing the best technologies
                   in the market.
