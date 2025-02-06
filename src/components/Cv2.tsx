@@ -20,7 +20,7 @@ export default function CV() {
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          className="group lg:mt-10 sm:flex justify-center md:px-4"
+          className="group lg:mt-10 sm:flex justify-center"
           variant="outline"
           size="sm"
         >
