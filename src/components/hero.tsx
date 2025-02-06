@@ -83,12 +83,12 @@ const Technology = ({
   icon: Icon,
   label,
 }: {
-  icon: React.FC<{ className?: string }>;
+  icon: React.ReactNode;
   label: string;
 }) => {
   return (
     <div className="flex items-center gap-2 p-1 px-2   rounded">
-      <Icon className="h-5 w-5" />
+      {Icon}
       <small className="text-muted-foreground ">{label}</small>
     </div>
   );
