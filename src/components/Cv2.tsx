@@ -19,7 +19,11 @@ export default function CV() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="group mt-10" variant="outline" size="sm">
+        <Button
+          className="group lg:mt-10 sm:flex justify-center md:px-4"
+          variant="outline"
+          size="sm"
+        >
           View My CV
           <ArrowRight
             className=" -me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"
