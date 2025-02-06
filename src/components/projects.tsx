@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProjectsSection() {
   return (
-    <section className="py-16 max-w-7xl mx-auto">
+    <section className="py-16 max-w-6xl mx-auto">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold gradient">My Projects</h2>
         <p className="text-muted-foreground mb-6">A few projects i have done</p>
