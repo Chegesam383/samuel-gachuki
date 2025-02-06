@@ -1,4 +1,5 @@
-const Nextjs2 = ({ className }) => (
+import React from "react";
+const Nextjs2: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -53,7 +54,7 @@ const Nextjs2 = ({ className }) => (
   </svg>
 );
 
-const Reactjs = ({ className }) => (
+const Reactjs: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="101"
     height="100"
@@ -92,7 +93,7 @@ const Reactjs = ({ className }) => (
   </svg>
 );
 
-const Typescript = ({ className }) => (
+const Typescript: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -118,7 +119,7 @@ const Typescript = ({ className }) => (
   </svg>
 );
 
-const Tailwindcss = ({ className }) => (
+const Tailwindcss: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -139,7 +140,7 @@ const Tailwindcss = ({ className }) => (
   </svg>
 );
 
-const Shadcnui = ({ className }) => (
+const Shadcnui: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -181,7 +182,7 @@ const Shadcnui = ({ className }) => (
   </svg>
 );
 
-const Nodejs = ({ className }) => (
+const Nodejs: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -207,7 +208,7 @@ const Nodejs = ({ className }) => (
   </svg>
 );
 
-const Prisma = ({ className }) => (
+const Prisma: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -230,7 +231,7 @@ const Prisma = ({ className }) => (
   </svg>
 );
 
-const Postgresql = ({ className }) => (
+const Postgresql: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -266,7 +267,7 @@ const Postgresql = ({ className }) => (
   </svg>
 );
 
-const Supabase = ({ className }) => (
+const Supabase: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -322,7 +323,7 @@ const Supabase = ({ className }) => (
   </svg>
 );
 
-const Git = ({ className }) => (
+const Git: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -343,7 +344,7 @@ const Git = ({ className }) => (
   </svg>
 );
 
-const Github = ({ className }) => (
+const Github: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -369,7 +370,7 @@ const Github = ({ className }) => (
   </svg>
 );
 
-const Vscode = ({ className }) => (
+const Vscode: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     height="100"
@@ -405,7 +406,7 @@ const Vscode = ({ className }) => (
   </svg>
 );
 
-const ReactQuery = ({ className }) => (
+const ReactQuery: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     width="100"
     className={className}

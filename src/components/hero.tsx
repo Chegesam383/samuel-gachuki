@@ -79,14 +79,17 @@ const Hero = () => {
   );
 };
 
-const Technology = (Item: {
-  icon: React.FC<React.ReactNode>;
+const Technology = ({
+  icon: Icon,
+  label,
+}: {
+  icon: React.FC<{ className?: string }>;
   label: string;
 }) => {
   return (
     <div className="flex items-center gap-2 p-1 px-2   rounded">
-      <Item.icon className="h-5 w-5" />
-      <small className="text-muted-foreground ">{Item.label}</small>
+      <Icon className="h-5 w-5" />
+      <small className="text-muted-foreground ">{label}</small>
     </div>
   );
 };
