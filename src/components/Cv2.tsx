@@ -37,7 +37,7 @@ export default function CV() {
           </DialogDescription>
         </DialogHeader>
         {/* Dark Mode Toggle */}
-        <div className="flex justify-between m-4">
+        <div className="flex justify-between ">
           <div>
             <DialogClose className="p-4 font-bold">
               <X />

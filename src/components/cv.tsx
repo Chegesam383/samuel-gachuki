@@ -7,11 +7,11 @@ import { Separator } from "@/components/ui/separator";
 
 const CvContent: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gray-100 dark:bg-slate-950 text-gray-800 dark:text-gray-100 p-8">
+    <div className="min-h-screen flex flex-col items-center bg-gray-100 dark:bg-slate-950 text-gray-800 dark:text-gray-100 pb-2">
       <div className="w-full max-w-4xl">
         {/* CV Content */}
         <Card className="shadow-lg dark:bg-gray-800">
-          <CardContent className="p-6">
+          <CardContent className="p-4">
             {/* Header */}
             <div className="text-center">
               <h1 className="text-3xl font-bold">Samuel Gachuki</h1>

@@ -14,7 +14,7 @@ import {
   SiMongodb,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-const size = 25;
+const size = 20;
 
 export const frontendTools = [
   { icon: <SiNextdotjs size={size} />, label: "Next js" },
