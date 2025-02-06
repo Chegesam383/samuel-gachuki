@@ -1,8 +1,10 @@
 import React from "react";
 import { Card } from "./ui/card";
-import { Button } from "./ui/button";
-import { ArrowRight, MapPin } from "lucide-react";
+
+import { MapPin } from "lucide-react";
 import { backendTools, frontendTools, tools } from "@/lib/constants";
+import CV from "./Cv2";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -15,30 +17,23 @@ const Hero = () => {
                 <h6 className="text-5xl font-bold tracking-tight mb-3 gradient">
                   Fullstack Web Developer
                 </h6>
-                <p className="text-muted-foreground mb-3">
+                <p className="text-muted-foreground mt-4">
                   Lets transform your idea into a fully functional modern and
                   user oriented web application utilizing the best technologies
                   in the market.
                 </p>
               </div>
-              <img
-                src="sam2.jpg"
-                alt="Samuel gachuki"
-                height={20}
-                width={20}
+              <Image
+                src="/sam2.jpg"
+                alt="Samuelgachuki"
+                height={200}
+                width={200}
                 className="h-32 w-32 lg:h-40 lg:w-40 aspect-square rounded-full"
               />
             </div>
-
-            <Button className="group mt-4" size="sm" variant={"outline"}>
-              Download Cv
-              <ArrowRight
-                className="-me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"
-                size={16}
-                strokeWidth={2}
-                aria-hidden="true"
-              />
-            </Button>
+            <div className="flex  justify-center  md:block mt-6">
+              <CV />
+            </div>
           </Card>
           <Card className=" col-span-1 row-span-1 flex px-4 items-center justify-centerp-4 gap-4  p-4">
             <div className="h-3 w-3 animate-pulse bg-green-600 rounded-full "></div>
@@ -50,17 +45,12 @@ const Hero = () => {
 
           <Card className="col-span-2 row-span-3 flex flex-col py-2 px-4 ">
             <h3 className="text-xl font-semibold "> My Tech Stack </h3>
-
+            <hr className="mt-2" />
             <h4 className="font-bold my-2 text-muted-foreground ">Frontend</h4>
             <div className="flex gap-1 flex-wrap">
               {frontendTools.map((Item, index) => {
                 return (
-                  <div className="flex  items-center gap-2 p-1 " key={index}>
-                    <Item.icon className="h-7 w-7" />
-                    <p className="text-muted-foreground text-sm">
-                      {Item.label}
-                    </p>
-                  </div>
+                  <Technology icon={Item.icon} label={Item.label} key={index} />
                 );
               })}
             </div>
@@ -69,12 +59,7 @@ const Hero = () => {
             <div className="flex gap-1 flex-wrap">
               {backendTools.map((Item, index) => {
                 return (
-                  <div className="flex  items-center gap-2 p-1 " key={index}>
-                    <Item.icon className="h-7 w-7" />
-                    <p className="text-muted-foreground text-sm">
-                      {Item.label}
-                    </p>
-                  </div>
+                  <Technology icon={Item.icon} label={Item.label} key={index} />
                 );
               })}
             </div>
@@ -83,12 +68,7 @@ const Hero = () => {
             <div className="flex gap-1 flex-wrap">
               {tools.map((Item, index) => {
                 return (
-                  <div className="flex  items-center gap-2 p-1 " key={index}>
-                    <Item.icon className="h-7 w-7" />
-                    <p className="text-muted-foreground text-sm">
-                      {Item.label}
-                    </p>
-                  </div>
+                  <Technology icon={Item.icon} label={Item.label} key={index} />
                 );
               })}
             </div>
@@ -99,4 +79,15 @@ const Hero = () => {
   );
 };
 
+const Technology = (Item: {
+  icon: React.FC<React.ReactNode>;
+  label: string;
+}) => {
+  return (
+    <div className="flex items-center gap-2 p-1 px-2   rounded">
+      <Item.icon className="h-5 w-5" />
+      <small className="text-muted-foreground ">{Item.label}</small>
+    </div>
+  );
+};
 export default Hero;
