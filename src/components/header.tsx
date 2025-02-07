@@ -11,6 +11,8 @@ const mynerve = Mynerve({
   weight: ["400"],
 });
 
+import { TextEffect } from "./ui/text-animation";
+
 const Header = () => {
   return (
     <header className="">
@@ -20,7 +22,9 @@ const Header = () => {
             href="/"
             className={`ml-4 text-xl md:text-2xl font-bold gradient ${mynerve.className}`}
           >
-            Samuel Gachuki
+            <TextEffect per="char" preset="fade">
+              Samuel Gachuki
+            </TextEffect>
           </Link>
 
           <div className="flex items-center">
