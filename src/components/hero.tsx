@@ -45,7 +45,7 @@ const ProfileCard = () => (
       <div className="flex-1">
         <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
           Hi <span className="text-4xl inline-block animate-wave ">👋</span> I
-          am a
+          am <b className="gradient">Samuel</b> a
         </h1>
         <h6 className="text-5xl font-bold text-wrap tracking-tight mb-2 gradient text-center md:text-left">
           Fullstack Web Developer

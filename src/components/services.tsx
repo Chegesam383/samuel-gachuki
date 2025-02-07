@@ -38,7 +38,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <motion.section
-      className=" max-w-6xl mx-auto p-4 mt-10"
+      className=" max-w-6xl mx-auto p-4 my-4"
       initial="hidden"
       animate="show"
       variants={container}
