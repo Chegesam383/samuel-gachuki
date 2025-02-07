@@ -1,4 +1,4 @@
-import { Code, Database, Search } from "lucide-react";
+import { Code, Database, Search, TabletSmartphone } from "lucide-react";
 import { Card } from "./ui/card";
 import * as motion from "motion/react-client";
 
@@ -33,6 +33,13 @@ const services = [
     icon: Search,
     bg: "indigo-500",
   },
+  {
+    title: "Responsive design",
+    description:
+      "I focus using the mobile first front end development aproach to enhance user experience",
+    icon: TabletSmartphone,
+    bg: "indigo-500",
+  },
 ];
 
 export default function ServicesSection() {
@@ -47,10 +54,10 @@ export default function ServicesSection() {
       <p className="text-muted-foreground mb-6">
         I offer a wide variety of web development services
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {services.map((service, index) => (
           <div key={index}>
-            <Card className="p-4 rounded-lg transition-transform hover:scale-102">
+            <Card className="p-4 rounded-lg transition-transform hover:scale-105">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/70 text-primary-foreground rounded-full mb-4">
                 <service.icon className="w-6 h-6" />
               </div>
