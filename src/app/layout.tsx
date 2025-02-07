@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
+import { seoKeywords } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Samuel Gachuki",
   description: "Samuel Gachuki | Portfolio",
+  keywords: seoKeywords,
 };
 
 export default function RootLayout({

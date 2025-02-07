@@ -13,58 +13,60 @@ export default function ProjectsSection() {
         <p className="text-muted-foreground mb-6">A few projects i have done</p>
 
         {[1, 2, 3].map((_, index) => (
-          <Project key={index} />
+          <Project key={index} index={index + 1} />
         ))}
       </div>
     </section>
   );
 }
 
-const Project = () => (
-  <Card className="p-6 pb-0 rounded-lg border my-2">
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2, duration: 0.7 }}
-      className="sm:flex"
-    >
-      <div className="flex flex-col">
-        <h4 className="text-xl font-semibold mb-2">Ecommerce website</h4>
-        <p className="text-muted-foreground my-4">
-          A modern ecommerce platform that with Admin dashboard, add to cart,
-          checkout and authentication.
-        </p>
+const Project = ({ index }: { index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.1 * index }}
+    viewport={{ once: true }}
+  >
+    <Card className="p-6 pb-0 rounded-lg border my-2">
+      <div className="sm:flex">
+        <div className="flex flex-col">
+          <h4 className="text-xl font-semibold mb-2">Ecommerce website</h4>
+          <p className="text-muted-foreground my-4">
+            A modern ecommerce platform that with Admin dashboard, add to cart,
+            checkout and authentication.
+          </p>
 
-        <div className="flex flex-wrap gap-1 my-4">
-          <Badge>Next js</Badge>
-          <Badge>Tailwind css</Badge>
-          <Badge>Prisma ORM</Badge>
-          <Badge>Next Auth</Badge>
-          <Badge>Mongodb</Badge>
+          <div className="flex flex-wrap gap-1 my-4">
+            <Badge>Next js</Badge>
+            <Badge>Tailwind css</Badge>
+            <Badge>Prisma ORM</Badge>
+            <Badge>Next Auth</Badge>
+            <Badge>Mongodb</Badge>
+          </div>
+
+          <div className="flex gap-3 my-4">
+            <Link href="https://fashionsence.vercel.app/" target="_blank">
+              <ExternalLink />
+            </Link>
+            <Link
+              href="https://github.com/Chegesam383/Fashionsence"
+              target="_blank"
+            >
+              <Github />
+            </Link>
+          </div>
         </div>
 
-        <div className="flex gap-3 my-4">
-          <Link href="https://fashionsence.vercel.app/" target="_blank">
-            <ExternalLink />
-          </Link>
-          <Link
-            href="https://github.com/Chegesam383/Fashionsence"
-            target="_blank"
-          >
-            <Github />
-          </Link>
+        <div className=" w-full h-72 overflow-hidden mb-0">
+          <Image
+            height={400}
+            width={600}
+            alt="project"
+            src="/fashionsence.jpeg"
+            className="w-full h-full object-cover transition-all object-top drop-shadow-lg rounded rounded-br-none rounded-bl-none hover:object-bottom"
+          />
         </div>
       </div>
-
-      <div className=" w-full h-72 overflow-hidden mb-0">
-        <Image
-          height={400}
-          width={600}
-          alt="project"
-          src="/fashionsence.jpeg"
-          className="w-full h-full object-cover transition-all object-top drop-shadow-lg rounded rounded-br-none rounded-bl-none hover:object-bottom"
-        />
-      </div>
-    </motion.div>
-  </Card>
+    </Card>
+  </motion.div>
 );
