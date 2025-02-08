@@ -102,37 +102,13 @@ const LocationCard = () => {
         now.getUTCSeconds()
       );
 
-      // Get day with ordinal suffix
-      const day = utcTime.getDate();
-      const ordinalSuffix = (d: number) =>
-        ["th", "st", "nd", "rd"][
-          d % 10 > 3 || [11, 12, 13].includes(d % 100) ? 0 : d % 10
-        ] || "th";
-
-      // Get month name
-      const monthNames = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ];
-      const month = monthNames[utcTime.getMonth()];
-
       // Get formatted time (12-hour format)
       let hours = utcTime.getHours();
       const minutes = utcTime.getMinutes().toString().padStart(2, "0");
       const amPm = hours >= 12 ? "PM" : "AM";
       hours = hours % 12 || 12;
 
-      return `${day}${ordinalSuffix(day)} ${month} ${hours}:${minutes} ${amPm}`;
+      return `${hours}:${minutes} ${amPm}`;
     } catch (error) {
       return (error as Error).message;
     }
