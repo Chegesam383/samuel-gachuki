@@ -74,18 +74,90 @@ const ProfileCard = () => (
 );
 
 const AvailabilityCard = () => (
-  <Card className="col-span-3 row-span-1 flex p-2 items-center justify-center  gap-2">
-    <div className="h-3 w-3 animate-pulse bg-green-600 rounded-full"></div>
-    <p className="text-nowrap">Available for work and new projects</p>
+  <Card className="col-span-3 row-span-1 flex flex-col p-2 justify-center">
+    <small className="text-muted-foreground mb-2 block text-center md:text-left">
+      Availability status
+    </small>
+    <div className="flex items-center gap-2 justify-center md:justify-start">
+      <span className="h-3 w-3 animate-pulse bg-green-600 rounded-full"></span>
+      <p className="text-nowrap">Available for work and new projects</p>
+    </div>
   </Card>
 );
 
-const LocationCard = () => (
-  <Card className="col-span-2 row-span-1 flex items-center justify-center p-2">
-    <MapPin className="mr-3 text-red-900" /> Toronto, Canada
-    <span className="text-muted-foreground text-sm"> &nbsp;&nbsp;</span>
-  </Card>
-);
+const LocationCard = () => {
+  function getFormattedTime(gmtOffset: number): string {
+    try {
+      if (!Number.isInteger(gmtOffset)) {
+        throw new Error("Invalid GMT offset. Please enter an integer.");
+      }
+
+      const now = new Date();
+      const utcTime = new Date(
+        now.getUTCFullYear(),
+        now.getUTCMonth(),
+        now.getUTCDate(),
+        now.getUTCHours() + gmtOffset,
+        now.getUTCMinutes(),
+        now.getUTCSeconds()
+      );
+
+      // Get day with ordinal suffix
+      const day = utcTime.getDate();
+      const ordinalSuffix = (d: number) =>
+        ["th", "st", "nd", "rd"][
+          d % 10 > 3 || [11, 12, 13].includes(d % 100) ? 0 : d % 10
+        ] || "th";
+
+      // Get month name
+      const monthNames = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const month = monthNames[utcTime.getMonth()];
+
+      // Get formatted time (12-hour format)
+      let hours = utcTime.getHours();
+      const minutes = utcTime.getMinutes().toString().padStart(2, "0");
+      const amPm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+
+      return `${day}${ordinalSuffix(day)} ${month} ${hours}:${minutes} ${amPm}`;
+    } catch (error) {
+      return (error as Error).message;
+    }
+  }
+
+  return (
+    <Card className="col-span-2 row-span-1 flex flex-col p-2 justify-center ">
+      <small className="text-muted-foreground mb-2 block text-center md:text-left">
+        Based in
+      </small>
+      <div className="flex justify-center md:justify-start">
+        <div className="flex items-center">
+          <div className="flex flex-col">
+            <p className="text-nowrap flex justify-center">
+              <MapPin className="mr-2 text-red-900" /> Toronto, Canada
+            </p>
+            <small className="text-sm text-muted-foreground text-[10px] text-nowrap text-center ">
+              &nbsp; &nbsp; {getFormattedTime(-5)} &nbsp;( -5 UTC)
+            </small>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+};
 
 const TechStackCard = () => (
   <Card className="col-span-3 row-span-4 flex flex-col p-4">
