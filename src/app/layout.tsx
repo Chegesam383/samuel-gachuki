@@ -19,7 +19,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Samuel Gachuki",
   description: "Samuel Gachuki | Portfolio",
+  metadataBase: new URL("https://samuel-gachuki.vercel.app"),
   keywords: seoKeywords,
+  openGraph: {
+    description: "Samuel chege Gachuki a web developer based in Toronto",
+    images: "/portfolio.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  antialiased  `}
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased bg-slate-100 dark:bg-slate-950`}
       >
         <ThemeProvider
           attribute="class"

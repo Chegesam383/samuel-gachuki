@@ -1,3 +1,4 @@
+import { Code, Database, Search, TabletSmartphone } from "lucide-react";
 import React from "react";
 import {
   SiNextdotjs,
@@ -45,6 +46,37 @@ export const tools = [
   {
     icon: <VscVscode size={size} className="text-cyan-700" />,
     label: "Vs code",
+  },
+];
+
+export const services = [
+  {
+    title: "Web Development",
+    description:
+      "I create responsive and user-friendly websites using next js and react js.",
+    icon: Code,
+    bg: "indigo-500",
+  },
+  {
+    title: "Backend Development",
+    description:
+      "I Build scalable and performant APIs and backend services such as authentication.",
+    icon: Database,
+    bg: "indigo-500",
+  },
+  {
+    title: "SEO Optimization",
+    description:
+      "I Optimize website visibility and ranking in search engine results pages.",
+    icon: Search,
+    bg: "indigo-500",
+  },
+  {
+    title: "Responsive design",
+    description:
+      "I focus using the mobile first front end development aproach to enhance user experience",
+    icon: TabletSmartphone,
+    bg: "indigo-500",
   },
 ];
 
