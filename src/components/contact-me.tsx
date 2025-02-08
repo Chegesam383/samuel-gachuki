@@ -21,19 +21,23 @@ function SubmitButton() {
 
 export function ContactMe() {
   const [message, setMessage] = useState<string | null>(null);
+  const [textColor, setTextColor] = useState<string>("text-green-500");
 
   async function handleSubmit(formData: FormData) {
     const result = await submitContactForm(formData);
-    if (result.success) {
-      setMessage(result.message);
+
+    if (result?.success === true) {
+      setMessage(result?.message);
+      setTextColor("text-green-500");
     } else {
+      setTextColor("text-red-500");
       setMessage("There was an error sending your message. Please try again.");
     }
   }
 
   return (
     <section
-      className="max-w-4xl mx-auto flex flex-col md:flex-row p-4 gap-4 lg:gap-8 w-full  my-8"
+      className="max-w-6xl mx-auto flex flex-col md:flex-row p-4 gap-4 lg:gap-8 w-full  my-8"
       id="contact-me"
     >
       <div className="md:w-2/3 space-y-4">
@@ -80,7 +84,7 @@ export function ContactMe() {
           </form>
         </CardContent>
         <CardFooter>
-          {message && <p className="text-sm text-green-600">{message}</p>}
+          {message && <p className={`text-sm ${textColor}`}>{message}</p>}
         </CardFooter>
       </Card>
     </section>

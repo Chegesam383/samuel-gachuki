@@ -44,7 +44,7 @@ export default Hero;
 
 const ProfileCard = () => (
   <Card className="col-span-5 row-span-3 p-4 flex flex-col justify-between">
-    <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap hover:scale-105 transition-all">
+    <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
       <div className="flex-1">
         <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
           Hi <span className="text-4xl inline-block animate-wave ">👋</span> I
