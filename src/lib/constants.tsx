@@ -36,7 +36,7 @@ export const backendTools = [
   { icon: <SiSupabase size={size} />, label: "Supabase" },
 
   { icon: <SiMongodb size={size} />, label: "Mongo DB" },
-  { icon: <SiReactquery size={size} />, label: "Reactquery" },
+  { icon: <SiReactquery size={size} />, label: "React query" },
 ];
 export const tools = [
   { icon: <SiTypescript size={size} color="" />, label: "Typescript" },
@@ -51,7 +51,7 @@ export const tools = [
 
 export const services = [
   {
-    title: "Web Development",
+    title: "Web and App Development",
     description:
       "I create responsive and user-friendly websites using next js and react js.",
     icon: Code,
@@ -65,7 +65,7 @@ export const services = [
     bg: "indigo-500",
   },
   {
-    title: "SEO Optimization",
+    title: "Serch Engine Optimization",
     description:
       "I Optimize website visibility and ranking in search engine results pages.",
     icon: Search,

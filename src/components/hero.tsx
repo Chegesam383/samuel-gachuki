@@ -33,7 +33,7 @@ const Hero = () => {
         <LocationCard />
         <AvailabilityCard />
         <TechStackCard />
-        <Other />
+        <About />
         <Services />
       </motion.div>
     </section>
@@ -110,31 +110,33 @@ const TechCategory = ({ title, tools }: { title: string; tools: tool[] }) => (
   </motion.div>
 );
 
-const Other = () => (
+const About = () => (
   <Card className="col-span-2 row-span-4 p-2">
     <h3 className="text-xl font-semibold">About Me</h3>
     <p className="tracking-widest leading-relaxed text-muted-foreground p-4 px-2">
       I am a passionate <span className="font-bold text-primary">Node.js</span>{" "}
-      developer focused on building secure and user friendly{" "}
+      developer focused on building user friendly{" "}
       <span className="font-bold text-primary">
         web and mobile applications
       </span>
       . As a<span className="font-bold text-primary">&nbsp;cybersecurity</span>{" "}
-      graduate, I ensure{" "}
+      graduate, I follow a well outlined{" "}
       <span className="font-bold text-primary">
-        &nbsp;secure web development,
+        &nbsp;secure software development life cycle.
       </span>{" "}
-      &nbsp; throughout the development cycle.
     </p>
   </Card>
 );
 
 const Services = () => (
-  <Card className="col-span-5 row-span-2 p-2 w-full">
+  <Card className="col-span-5 row-span-2 p-4 w-full">
     <h3 className="text-xl font-semibold mb-2">My Services</h3>
     <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
       {services.map((service, index) => (
-        <div key={index} className="border-r last:border-0">
+        <div
+          key={index}
+          className={`border-r [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r last:border-0`}
+        >
           <div className="p-1 my-2 rounded-lg space-y-3">
             <div className="flex items-center justify-center w-7 h-7 bg-primary/70 text-primary-foreground rounded-full mb-4">
               <service.icon className="w-4 h-4" />

@@ -22,7 +22,7 @@ export default function ProjectsSection() {
 
 const Project = ({ index }: { index: number }) => (
   <motion.div
-    initial={{ opacity: 0, y: 100 }}
+    initial={{ opacity: index == 1 ? 1 : 0, y: index == 1 ? 0 : 100 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.1 * index }}
     viewport={{ once: true }}
