@@ -6,6 +6,7 @@ import CV from "./Cv2";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { Badge } from "./ui/badge";
+import TimeDisplay from "./timedisplay";
 
 export type tool = {
   icon: React.ReactNode;
@@ -86,34 +87,6 @@ const AvailabilityCard = () => (
 );
 
 const LocationCard = () => {
-  function getFormattedTime(gmtOffset: number): string {
-    try {
-      if (!Number.isInteger(gmtOffset)) {
-        throw new Error("Invalid GMT offset. Please enter an integer.");
-      }
-
-      const now = new Date();
-      const utcTime = new Date(
-        now.getUTCFullYear(),
-        now.getUTCMonth(),
-        now.getUTCDate(),
-        now.getUTCHours() + gmtOffset,
-        now.getUTCMinutes(),
-        now.getUTCSeconds()
-      );
-
-      // Get formatted time (12-hour format)
-      let hours = utcTime.getHours();
-      const minutes = utcTime.getMinutes().toString().padStart(2, "0");
-      const amPm = hours >= 12 ? "PM" : "AM";
-      hours = hours % 12 || 12;
-
-      return `${hours}:${minutes} ${amPm}`;
-    } catch (error) {
-      return (error as Error).message;
-    }
-  }
-
   return (
     <Card className="col-span-2 row-span-1 flex flex-col p-2 justify-center ">
       <small className="text-muted-foreground mb-2 block text-center md:text-left">
@@ -124,10 +97,7 @@ const LocationCard = () => {
           <div className="flex items-center md:flex-col">
             <p className="text-nowrap flex justify-center items-center">
               <MapPin className="mr-2 text-red-900" /> Toronto, CA
-              <small className="text-[10px] text-muted-foreground  text-nowrap text-center ">
-                &nbsp; {getFormattedTime(-5)} &nbsp;
-                <span className="inline md:hidden xl:inline">(-5UTC)</span>
-              </small>
+              <TimeDisplay gmtOffset={-5} />
             </p>
           </div>
         </div>
