@@ -121,13 +121,14 @@ const LocationCard = () => {
       </small>
       <div className="flex justify-center md:justify-start">
         <div className="flex items-center">
-          <div className="flex flex-col">
-            <p className="text-nowrap flex justify-center">
-              <MapPin className="mr-2 text-red-900" /> Toronto, Canada
+          <div className="flex items-center md:flex-col">
+            <p className="text-nowrap flex justify-center items-center">
+              <MapPin className="mr-2 text-red-900" /> Toronto, CA
+              <small className="text-[10px] text-muted-foreground  text-nowrap text-center ">
+                &nbsp; {getFormattedTime(-5)} &nbsp;
+                <span className="inline md:hidden xl:inline">(-5UTC)</span>
+              </small>
             </p>
-            <small className="ml-2 text-sm text-muted-foreground text-[8px] text-nowrap text-center ">
-              &nbsp; &nbsp; {getFormattedTime(-5)} &nbsp;( -5 UTC)
-            </small>
           </div>
         </div>
       </div>
