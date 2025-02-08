@@ -125,7 +125,7 @@ const LocationCard = () => {
             <p className="text-nowrap flex justify-center">
               <MapPin className="mr-2 text-red-900" /> Toronto, Canada
             </p>
-            <small className="text-sm text-muted-foreground text-[10px] text-nowrap text-center ">
+            <small className="ml-2 text-sm text-muted-foreground text-[8px] text-nowrap text-center ">
               &nbsp; &nbsp; {getFormattedTime(-5)} &nbsp;( -5 UTC)
             </small>
           </div>
