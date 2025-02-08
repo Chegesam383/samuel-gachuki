@@ -26,12 +26,15 @@ export function ContactMe() {
   async function handleSubmit(formData: FormData) {
     const result = await submitContactForm(formData);
 
-    if (result?.success === true) {
+    if (result?.success) {
       setMessage(result?.message);
       setTextColor("text-green-500");
     } else {
       setTextColor("text-red-500");
-      setMessage("There was an error sending your message. Please try again.");
+      setMessage(
+        "There was an error sending your message. Please try again." +
+          result.message
+      );
     }
   }
 
