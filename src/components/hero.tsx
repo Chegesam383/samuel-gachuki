@@ -76,10 +76,10 @@ const ProfileCard = () => (
 
 const AvailabilityCard = () => (
   <Card className="col-span-3 row-span-1 flex flex-col p-2 justify-center">
-    <small className="text-muted-foreground mb-2 block text-center md:text-left">
+    <small className="text-muted-foreground mb-2 block text-center lg:text-left">
       My Availability Status,
     </small>
-    <div className="flex items-center gap-2 justify-center md:justify-start">
+    <div className="flex items-center gap-2 justify-center lg:justify-start">
       <span className="h-3 w-3 animate-pulse bg-green-600 rounded-full"></span>
       <p className="text-nowrap">Available For Work And New Projects.</p>
     </div>
@@ -89,18 +89,14 @@ const AvailabilityCard = () => (
 const LocationCard = () => {
   return (
     <Card className="col-span-2 row-span-1 flex flex-col p-2 justify-center ">
-      <small className="text-muted-foreground mb-2 block text-center md:text-left">
+      <small className="text-muted-foreground mb-2 block text-center lg:text-left">
         I&apos;m Based In,
       </small>
-      <div className="flex justify-center md:justify-start">
-        <div className="flex items-center">
-          <div className="flex items-center md:flex-col">
-            <p className="text-nowrap flex justify-center items-center">
-              <MapPin className="mr-2 text-red-900" /> Toronto, CA
-              <TimeDisplay gmtOffset={-5} />
-            </p>
-          </div>
-        </div>
+      <div className="flex justify-center lg:justify-start">
+        <p className="text-nowrap flex justify-center items-center">
+          <MapPin className="mr-2 text-red-900" /> Toronto, CA
+          <TimeDisplay gmtOffset={-5} />
+        </p>
       </div>
     </Card>
   );

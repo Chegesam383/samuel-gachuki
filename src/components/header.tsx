@@ -16,7 +16,7 @@ import { TextEffect } from "./ui/text-animation";
 const Header = () => {
   return (
     <header className="">
-      <nav className="border-foreground-muted  md:px-8  fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="border-foreground-muted fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex justify-between py-2 max-w-6xl items-center container mx-auto">
           <Link
             href="/"
