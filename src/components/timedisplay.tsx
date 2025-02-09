@@ -38,7 +38,8 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ gmtOffset }) => {
 
   return (
     <small className="text-[10px] text-muted-foreground  text-nowrap text-center ">
-      &nbsp; {time} &nbsp;
+      <span className="inline lg:hidden"> &nbsp;Current Time:</span>
+      &nbsp;{time}&nbsp;
       <span className="inline lg:hidden xl:inline">({gmtOffset}UTC)</span>
     </small>
   );
