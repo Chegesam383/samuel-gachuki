@@ -7,15 +7,15 @@ import * as motion from "motion/react-client";
 
 export default function ProjectsSection() {
   return (
-    <section className="max-w-6xl mx-auto p-4 my-4">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold gradient">My Projects</h2>
-        <p className="text-muted-foreground mb-6">A few projects i have done</p>
+    <section className="container max-w-6xl mx-auto p-4 my-4">
+      <h2 className="text-3xl font-bold gradient">My Projects</h2>
+      <p className="text-muted-foreground mb-6">
+        A few of my selected projects{" "}
+      </p>
 
-        {[1, 2, 3].map((_, index) => (
-          <Project key={index} index={index + 1} />
-        ))}
-      </div>
+      {[1, 2, 3].map((_, index) => (
+        <Project key={index} index={index + 1} />
+      ))}
     </section>
   );
 }

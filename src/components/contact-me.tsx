@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin } from "lucide-react";
+import CopyToClipboard from "./copy-to-clipboard";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -40,22 +41,28 @@ export function ContactMe() {
 
   return (
     <section
-      className="max-w-6xl mx-auto flex flex-col md:flex-row p-4 gap-4 lg:gap-8 w-full  my-8"
+      className="max-w-6xl mx-auto flex flex-col md:flex-row p-4 gap-4 lg:gap-8 w-full  my-8 container"
       id="contact-me"
     >
-      <div className="md:w-2/3 space-y-4">
-        <h2 className="text-3xl font-bold">Contact Me</h2>
+      <div className="md:w-2/3 space-y-4 ">
+        <h2 className="text-3xl font-bold gradient">Contact Me</h2>
         <p className="text-muted-foreground">
           Get in touch with me for any inquiries or collaborations.
         </p>
         <div className="space-y-4 mt-8">
           <div className="flex items-center space-x-3">
             <Mail className="w-5 h-5 text-muted-foreground" />
-            <span>chegegachuki@gmail.com</span>
+            <a href="mailto:chegegachuki@gmail.com" className="hover:underline">
+              chegegachuki@gmail.com{" "}
+            </a>
+            <CopyToClipboard textData="chegegachuki@gmail.com" />
           </div>
           <div className="flex items-center space-x-3">
             <Phone className="w-5 h-5 text-muted-foreground" />
-            <span>+1 905 924 5608</span>
+            <a href="tel:+19059245608" className=" hover:underline">
+              +1 905 924 5608
+            </a>
+            <CopyToClipboard textData="+1 905 924 5608" />
           </div>
           <div className="flex items-center space-x-3">
             <MapPin className="w-5 h-5 text-muted-foreground" />
@@ -67,7 +74,7 @@ export function ContactMe() {
         <CardContent className="pt-6">
           <form action={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name">Your Name</Label>
               <Input id="name" name="name" required />
             </div>
             <div className="space-y-2">
