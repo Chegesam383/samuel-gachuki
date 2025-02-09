@@ -55,27 +55,29 @@ export const services = [
     description:
       "I create responsive and user-friendly websites using next js and react js.",
     icon: Code,
-    bg: "indigo-500",
+    bg: "red-500",
   },
-  {
-    title: "Backend Development",
-    description:
-      "I Build scalable and performant APIs and backend services such as authentication.",
-    icon: Database,
-    bg: "indigo-500",
-  },
+
   {
     title: "Serch Engine Optimization",
     description:
       "I Optimize website visibility and ranking in search engine results pages.",
     icon: Search,
-    bg: "indigo-500",
+    bg: "green-500",
   },
   {
-    title: "Responsive design",
+    title: "Responsive Design",
     description:
       "I focus using the mobile first front end development aproach to enhance user experience",
     icon: TabletSmartphone,
+    bg: "indigo-500",
+  },
+
+  {
+    title: "Backend Development",
+    description:
+      "I Build scalable and performant APIs and backend services such as authentication.",
+    icon: Database,
     bg: "indigo-500",
   },
 ];

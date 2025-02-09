@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 mt-20">
       <motion.div
-        className="flex flex-col gap-4  h-full mx-auto lg:grid lg:gap-2 grid-cols-10 grid-rows-5"
+        className="flex flex-col gap-4 h-full mx-auto lg:grid lg:gap-2 grid-cols-10 grid-rows-5"
         initial="hidden"
         animate="show"
         variants={container}
@@ -77,11 +77,11 @@ const ProfileCard = () => (
 const AvailabilityCard = () => (
   <Card className="col-span-3 row-span-1 flex flex-col p-2 justify-center">
     <small className="text-muted-foreground mb-2 block text-center md:text-left">
-      Availability status
+      My Availability Status,
     </small>
     <div className="flex items-center gap-2 justify-center md:justify-start">
       <span className="h-3 w-3 animate-pulse bg-green-600 rounded-full"></span>
-      <p className="text-nowrap">Available for work and new projects</p>
+      <p className="text-nowrap">Available For Work And New Projects.</p>
     </div>
   </Card>
 );
@@ -90,7 +90,7 @@ const LocationCard = () => {
   return (
     <Card className="col-span-2 row-span-1 flex flex-col p-2 justify-center ">
       <small className="text-muted-foreground mb-2 block text-center md:text-left">
-        Based in
+        I&apos;m Based In,
       </small>
       <div className="flex justify-center md:justify-start">
         <div className="flex items-center">
