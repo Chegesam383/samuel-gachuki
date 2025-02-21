@@ -23,7 +23,7 @@ const container = {
 
 const Hero = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 mt-20">
+    <section className="max-w-6xl mx-auto px-4 mt-20 md:mt-24">
       <motion.div
         className="flex flex-col gap-4 h-full mx-auto lg:grid lg:gap-2 grid-cols-10 grid-rows-5"
         initial="hidden"
@@ -44,7 +44,7 @@ const Hero = () => {
 export default Hero;
 
 const ProfileCard = () => (
-  <Card className="col-span-5 row-span-3 p-4 flex flex-col justify-between">
+  <Card className="col-span-5 bg-muted/30 row-span-3 p-4 flex flex-col justify-between">
     <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
       <div className="flex-1">
         <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
@@ -75,7 +75,7 @@ const ProfileCard = () => (
 );
 
 const AvailabilityCard = () => (
-  <Card className="col-span-3 row-span-1 flex flex-col p-2 justify-center">
+  <Card className="col-span-3 row-span-1 bg-muted/35 flex flex-col p-2 justify-center">
     <small className="text-muted-foreground mb-2 block text-center lg:text-left">
       My Availability Status,
     </small>
@@ -88,7 +88,7 @@ const AvailabilityCard = () => (
 
 const LocationCard = () => {
   return (
-    <Card className="col-span-2 row-span-1 flex flex-col p-2 justify-center ">
+    <Card className="col-span-2 bg-muted/35  row-span-1 flex flex-col p-2 justify-center ">
       <small className="text-muted-foreground mb-2 block text-center lg:text-left">
         I&apos;m Based In,
       </small>
@@ -103,21 +103,21 @@ const LocationCard = () => {
 };
 
 const TechStackCard = () => (
-  <Card className="col-span-3 row-span-4 flex flex-col p-4">
+  <Card className="col-span-3 bg-muted/40 row-span-4 flex flex-col p-2 px-4 ">
     <h3 className="text-xl font-semibold">My Tech Stack</h3>
-    <hr className="mt-2" />
-    <div className="flex w-full flex-col items-stretch justify-between">
-      <TechCategory title="Frontend" tools={frontendTools} />
-      <TechCategory title="Backend" tools={backendTools} />
-      <TechCategory title="Tools" tools={tools} />
+
+    <div className="flex w-full h-full  flex-col justify-around ">
+      <TechCategory title="Frontend tools" tools={frontendTools} />
+      <TechCategory title="Backend tools" tools={backendTools} />
+      <TechCategory title="Tools & productivity" tools={tools} />
     </div>
   </Card>
 );
 
 const TechCategory = ({ title, tools }: { title: string; tools: tool[] }) => (
   <motion.div>
-    <h4 className="font-bold my-2 text-muted-foreground">{title}</h4>
-    <div className="flex gap-1 flex-wrap">
+    <h4 className="font-semibold mt-2 text-muted-foreground">{title}</h4>
+    <div className="flex gap-2 flex-wrap">
       {tools.map((Item: { icon: React.ReactNode; label: string }) => (
         <Technology icon={Item.icon} label={Item.label} key={Item.label} />
       ))}
@@ -126,7 +126,7 @@ const TechCategory = ({ title, tools }: { title: string; tools: tool[] }) => (
 );
 
 const About = () => (
-  <Card className="col-span-2 row-span-4 p-2">
+  <Card className="col-span-2 bg-muted/40 row-span-4 p-2">
     <h3 className="text-xl font-semibold">About Me</h3>
     <p className="tracking-widest leading-relaxed text-muted-foreground p-4 px-2">
       I am a passionate <span className="font-bold text-primary">Node.js</span>{" "}
@@ -144,7 +144,7 @@ const About = () => (
 );
 
 const Services = () => (
-  <Card className="col-span-5 row-span-2 p-4 w-full">
+  <Card className="col-span-5 bg-muted/40 row-span-2 p-4 w-full">
     <h3 className="text-xl font-semibold mb-2">My Services</h3>
     <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
       {services.map((service, index) => (
@@ -164,11 +164,8 @@ const Services = () => (
   </Card>
 );
 const Technology = ({ icon: Icon, label }: tool) => (
-  <Badge
-    className="flex items-center gap-2 p-1 px-2 rounded"
-    variant={"outline"}
-  >
+  <div className="flex items-center gap-1 p-1 px-2 rounded">
     {Icon}
-    <small className="text-muted-foreground">{label}</small>
-  </Badge>
+    <small className="text-sm text-muted-foreground">{label}</small>
+  </div>
 );

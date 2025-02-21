@@ -66,7 +66,13 @@ export function ContactMe() {
           </div>
           <div className="flex items-center space-x-3">
             <MapPin className="w-5 h-5 text-muted-foreground" />
-            <span>Toulon Road, Toronto</span>
+            <a
+              href="https://www.google.com/maps/place/Toulon+Rd,+Scarborough,+ON/@43.7615125,-79.2217287,"
+              target="_blank"
+              className=" hover:underline"
+            >
+              <span>Toulon Road Scarborough, Toronto</span>
+            </a>
           </div>
         </div>
       </div>
@@ -80,6 +86,9 @@ export function ContactMe() {
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input id="email" name="email" type="email" required />
+              <small className="text-muted-foreground">
+                I will get back to you on this email
+              </small>
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
