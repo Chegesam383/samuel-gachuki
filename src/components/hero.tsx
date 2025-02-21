@@ -5,7 +5,6 @@ import { backendTools, frontendTools, tools, services } from "@/lib/constants";
 import CV from "./Cv2";
 import Image from "next/image";
 import * as motion from "motion/react-client";
-import { Badge } from "./ui/badge";
 import TimeDisplay from "./timedisplay";
 
 export type tool = {
