@@ -27,15 +27,12 @@ export function ContactMe() {
   async function handleSubmit(formData: FormData) {
     const result = await submitContactForm(formData);
 
-    if (result?.success) {
-      setMessage(result?.message);
+    if (result.success) {
+      setMessage(result.message);
       setTextColor("text-green-500");
     } else {
       setTextColor("text-red-500");
-      setMessage(
-        "There was an error sending your message. Please try again." +
-          result.message
-      );
+      setMessage(result.message);
     }
   }
 
@@ -66,13 +63,8 @@ export function ContactMe() {
           </div>
           <div className="flex items-center space-x-3">
             <MapPin className="w-5 h-5 text-muted-foreground" />
-            <a
-              href="https://www.google.com/maps/place/Toulon+Rd,+Scarborough,+ON/@43.7615125,-79.2217287,"
-              target="_blank"
-              className=" hover:underline"
-            >
-              <span>Toulon Road Scarborough, Toronto</span>
-            </a>
+
+            <span> Toronto</span>
           </div>
         </div>
       </div>

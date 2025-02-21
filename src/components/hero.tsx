@@ -22,7 +22,7 @@ const container = {
 
 const Hero = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 mt-20 md:mt-24">
+    <section className="max-w-6xl mx-auto lg:flex justify-center  px-4 mt-24 lg:mt-28">
       <motion.div
         className="flex flex-col gap-4 h-full mx-auto lg:grid lg:gap-2 grid-cols-10 grid-rows-5"
         initial="hidden"
@@ -47,15 +47,16 @@ const ProfileCard = () => (
     <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
       <div className="flex-1">
         <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
-          Hi <span className="text-4xl inline-block animate-wave ">👋</span> I
-          am <b className="gradient">Samuel</b> a
+          Hi <span className=" inline-block animate-wave ">👋</span> I am{" "}
+          <b className="gradient">Samuel</b> a,
         </h1>
-        <h6 className="text-5xl font-bold text-wrap tracking-tight my-5 gradient text-center md:text-left">
+
+        <p className="mb-2 gradient font-semibold tracking-wide text-xl text-center md:text-left md:max-w-[350px]">
           Fullstack Web Developer
-        </h6>
-        <p className="mb-2 tracking-wide text-md text-muted-foreground text-center md:text-left md:max-w-[350px]">
-          Let’s build that idea.
         </p>
+        <h6 className="text-5xl font-bold text-wrap tracking-tight my-5  text-center md:text-left">
+          Let’s build that idea!
+        </h6>
       </div>
       <div>
         <Image
@@ -63,7 +64,7 @@ const ProfileCard = () => (
           alt="Samuelgachuki"
           height={200}
           width={200}
-          className="h-32 w-32 lg:h-40 lg:w-40 aspect-square rounded-full"
+          className="h-28 w-28 lg:h-40 lg:w-40 aspect-square rounded-full border"
         />
       </div>
     </div>

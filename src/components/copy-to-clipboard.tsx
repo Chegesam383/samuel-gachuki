@@ -22,7 +22,15 @@ const CopyToClipboard: FC<{ textData: string }> = ({ textData }) => {
       className="inline  cursor-pointer text-muted-foreground"
       onClick={copyToClipboard}
     >
-      {copied ? <Check /> : <CopyIcon />}
+      {copied ? (
+        <span title="copied">
+          <Check size={18} />
+        </span>
+      ) : (
+        <span title="Copy to clipboard">
+          <CopyIcon size={18} />
+        </span>
+      )}
     </div>
   );
 };
