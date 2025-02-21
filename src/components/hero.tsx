@@ -18,12 +18,13 @@ const Hero = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 mt-24 lg:mt-28">
       <motion.div
-        className="flex flex-col h-full mx-auto md:grid gap-2 lg:gap-3 grid-cols-10 lg:grid-rows-5"
+        className="flex flex-col grid-flow-row-dense  md:grid gap-2 grid-cols-10 lg:grid-rows-5"
         initial="hidden"
       >
         <ProfileCard />
         <LocationCard />
         <AvailabilityCard />
+
         <TechStackCard />
         <About />
         <Services />
@@ -43,7 +44,7 @@ const ProfileCard = () => (
       y: 0,
     }}
   >
-    <Card className="p-4 flex flex-col justify-between herocard">
+    <Card className="p-4 flex flex-col h-full justify-between herocard">
       <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
         <div className="flex-1">
           <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
@@ -88,7 +89,7 @@ const ProfileCard = () => (
 
 const AvailabilityCard = () => (
   <motion.div
-    className="md:col-span-6 lg:col-span-3 row-span-1"
+    className="md:col-span-6 lg:col-span-3 row-span-1 mb-0"
     initial={{ opacity: 0, y: 400 }}
     animate={{
       opacity: 1,
@@ -98,13 +99,21 @@ const AvailabilityCard = () => (
       },
     }}
   >
-    <Card className="flex flex-col p-4 px-2 justify-center herocard">
+    <Card className="flex flex-col p-4 px-2 h-full justify-center herocard">
       <small className="text-muted-foreground mb-2 block text-center lg:text-left">
         My Availability Status,
       </small>
-      <div className="flex items-center gap-2 justify-center lg:justify-start">
-        <span className="h-3 w-3 animate-pulse bg-green-600 rounded-full"></span>
-        <p className="text-nowrap">Available For Work And New Projects.</p>
+      <div className="relative flex items-center gap-2 justify-center lg:justify-start">
+        <div className="relative">
+          <div className="h-2 w-2 bg-green-600 rounded-full relative">
+            <span className="absolute inset-0 bg-green-600 rounded-full animate-ping"></span>
+          </div>
+        </div>
+        <div>
+          <p className="leading-tight text-nowrap">
+            Available For Work & New Projects.
+          </p>
+        </div>
       </div>
     </Card>
   </motion.div>
@@ -123,7 +132,7 @@ const LocationCard = () => {
         },
       }}
     >
-      <Card className="flex flex-col p-4 px-2 justify-center herocard">
+      <Card className="flex flex-col p-4 px-2 h-full justify-center herocard">
         <small className="text-muted-foreground mb-2 block text-center lg:text-left">
           I&apos;m Based In,
         </small>
@@ -140,7 +149,7 @@ const LocationCard = () => {
 
 const TechStackCard = () => (
   <motion.div
-    className="md:col-span-6 lg:col-span-3  md:row-span-1 lg:row-span-4"
+    className="md:col-span-6 lg:col-span-3 h-full md:row-span-1 lg:row-span-4"
     initial={{ opacity: 0, y: 400 }}
     animate={{
       opacity: 1,
@@ -153,7 +162,7 @@ const TechStackCard = () => (
     <Card className="flex flex-col p-2 h-full px-4 herocard">
       <h3 className="text-xl font-semibold">My Tech Stack</h3>
 
-      <div className="flex w-full h-full  flex-col justify-around ">
+      <div className="flex w-full h-full gap-8 md:gap-0 flex-col justify-around ">
         <TechCategory title="Frontend tools" tools={frontendTools} />
         <TechCategory title="Backend tools" tools={backendTools} />
         <TechCategory title="Tools & productivity" tools={tools} />
@@ -164,7 +173,7 @@ const TechStackCard = () => (
 
 const TechCategory = ({ title, tools }: { title: string; tools: tool[] }) => (
   <motion.div>
-    <h4 className="font-semibold mt-2 text-muted-foreground">{title}</h4>
+    <h4 className="font-semibold  text-muted-foreground my-2">{title}</h4>
     <div className="flex gap-2 flex-wrap">
       {tools.map((Item: { icon: React.ReactNode; label: string }) => (
         <Technology icon={Item.icon} label={Item.label} key={Item.label} />
@@ -185,7 +194,7 @@ const About = () => (
       },
     }}
   >
-    <Card className=" p-2 herocard">
+    <Card className=" p-2 herocard h-full">
       <h3 className="text-xl font-semibold">About Me</h3>
       <p className="tracking-widest leading-relaxed text-muted-foreground p-4 px-2">
         I am a passionate{" "}
@@ -217,7 +226,7 @@ const Services = () => (
       },
     }}
   >
-    <Card className=" p-4 w-full herocard">
+    <Card className=" p-4 h-full w-full herocard">
       <h3 className="text-xl font-semibold mb-2">My Services</h3>
       <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
         {services.map((service, index) => (
@@ -240,6 +249,6 @@ const Services = () => (
 const Technology = ({ icon: Icon, label }: tool) => (
   <div className="flex items-center gap-1 p-1 px-2 rounded">
     {Icon}
-    <small className="text-sm text-muted-foreground">{label}</small>
+    <small className="text-sm ">{label}</small>
   </div>
 );

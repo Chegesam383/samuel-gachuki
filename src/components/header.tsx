@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header>
       <nav className="border-foreground-muted fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="flex justify-between p-4 max-w-6xl items-center container mx-auto">
+        <div className="flex justify-between px-4 py-2 max-w-6xl items-center container mx-auto">
           <Link
             href="/"
             className={`text-xl md:text-2xl font-bold gradient ${mynerve.className}`}

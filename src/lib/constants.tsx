@@ -1,7 +1,6 @@
 import { Code, Database, Search, TabletSmartphone } from "lucide-react";
 import React from "react";
 import {
-  SiNextdotjs,
   SiReact,
   SiTypescript,
   SiShadcnui,
@@ -14,38 +13,63 @@ import {
   SiGithub,
   SiMongodb,
 } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+
 const size = 20;
 
 export const frontendTools = [
-  { icon: <SiNextdotjs size={size} />, label: "Next js" },
   {
-    icon: <SiReact size={size} />,
+    icon: <SiNodedotjs size={size} className="text-muted-foreground" />,
+    label: "Next js",
+  },
+  {
+    icon: <SiReact size={size} className="text-muted-foreground" />,
     label: "React js",
   },
 
-  { icon: <SiTailwindcss size={size} />, label: "Tailwind css" },
-  { icon: <SiShadcnui />, label: "Shadcn ui" },
+  {
+    icon: <SiTailwindcss size={size} className="text-muted-foreground" />,
+    label: "Tailwind css",
+  },
+  {
+    icon: <SiShadcnui className="text-muted-foreground" />,
+    label: "Shadcn ui",
+  },
 ];
 
 export const backendTools = [
-  { icon: <SiNodedotjs size={size} />, label: "Node.js" },
+  {
+    icon: <SiNodedotjs size={size} className="text-muted-foreground" />,
+    label: "Node.js",
+  },
 
-  { icon: <SiDrizzle size={size} />, label: "Drizzle " },
+  {
+    icon: <SiDrizzle size={size} className="text-muted-foreground" />,
+    label: "Drizzle ",
+  },
 
-  { icon: <SiSupabase size={size} />, label: "Supabase" },
+  {
+    icon: <SiSupabase size={size} className="text-muted-foreground" />,
+    label: "Supabase",
+  },
 
-  { icon: <SiMongodb size={size} />, label: "Mongo DB" },
+  {
+    icon: <SiMongodb size={size} className="text-muted-foreground" />,
+    label: "Mongo DB",
+  },
   { icon: <SiReactquery size={size} />, label: "React query" },
 ];
 export const tools = [
-  { icon: <SiTypescript size={size} color="" />, label: "Typescript" },
-  { icon: <SiGit size={size} />, label: "Git" },
-  { icon: <SiGithub size={size} />, label: "Github" },
-
   {
-    icon: <VscVscode size={size} className="text-cyan-700" />,
-    label: "Vs code",
+    icon: <SiTypescript size={size} className="text-muted-foreground" />,
+    label: "Typescript",
+  },
+  {
+    icon: <SiGit size={size} className="text-muted-foreground" />,
+    label: "Git",
+  },
+  {
+    icon: <SiGithub size={size} className="text-muted-foreground" />,
+    label: "Github",
   },
 ];
 
