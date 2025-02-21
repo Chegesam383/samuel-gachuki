@@ -29,7 +29,7 @@ const Project = ({ index }: { index: number }) => (
     transition={{ delay: 0.1 * index }}
     viewport={{ once: true }}
   >
-    <Card className="p-6 pb-0 rounded-lg border my-2">
+    <Card className="p-6 pb-0 herocard border my-4">
       <div className="sm:flex  gap-8">
         <div className="flex flex-col">
           <h4 className="text-xl font-semibold mb-2">Ecommerce website</h4>

@@ -68,7 +68,7 @@ export function ContactMe() {
           </div>
         </div>
       </div>
-      <Card className="md:w-2/3">
+      <Card className="md:w-2/3 herocard">
         <CardContent className="pt-6">
           <form action={handleSubmit} className="space-y-4">
             <div className="space-y-2">
