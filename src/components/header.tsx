@@ -52,7 +52,7 @@ const Header = () => {
               </Link>
             </Button>
             <Link href="#contact-me">
-              <Button className="ml-4 group" size="sm">
+              <Button className="mx-2 group" size="sm">
                 Contact Me
                 <ArrowRight
                   className="hidden md:inline-block -me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import CvContent from "./cv";
-import { ArrowRight, Download, X } from "lucide-react";
+import { Download, FileText, X } from "lucide-react";
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 export default function CV() {
@@ -20,12 +20,12 @@ export default function CV() {
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          className="group mt-1 sm:flex justify-center"
+          className="group sm:flex justify-center"
           variant="outline"
           size="sm"
         >
           View My CV
-          <ArrowRight
+          <FileText
             className=" -me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"
             size={16}
             strokeWidth={2}

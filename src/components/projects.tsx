@@ -7,7 +7,10 @@ import * as motion from "motion/react-client";
 
 export default function ProjectsSection() {
   return (
-    <section className="mt-1 lg:mt-16 bg-slate-50 dark:bg-background/40 py-4 lg:py-16">
+    <section
+      className="mt-1 lg:mt-16 bg-slate-50 dark:bg-background/40 py-4 lg:py-16"
+      id="projects"
+    >
       <div className="container max-w-6xl  mx-auto p-4">
         <h2 className="text-3xl font-bold gradient">My Projects</h2>
         <p className="text-muted-foreground mb-6">
