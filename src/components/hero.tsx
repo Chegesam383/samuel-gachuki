@@ -22,9 +22,9 @@ const container = {
 
 const Hero = () => {
   return (
-    <section className="max-w-6xl mx-auto lg:flex justify-center  px-4 mt-24 lg:mt-28">
+    <section className="max-w-6xl mx-auto px-4 mt-24 lg:mt-28">
       <motion.div
-        className="flex flex-col gap-4 h-full mx-auto lg:grid lg:gap-2 grid-cols-10 grid-rows-5"
+        className="flex flex-col h-full mx-auto md:grid gap-2 lg:gap-3 grid-cols-10 lg:grid-rows-5"
         initial="hidden"
         animate="show"
         variants={container}
@@ -43,7 +43,7 @@ const Hero = () => {
 export default Hero;
 
 const ProfileCard = () => (
-  <Card className="col-span-5 bg-muted/30 row-span-3 p-4 flex flex-col justify-between">
+  <Card className="md:col-span-10 lg:col-span-5  lg:row-span-3 md:row-span-1 p-4 flex flex-col justify-between herocard">
     <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
       <div className="flex-1">
         <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
@@ -75,7 +75,7 @@ const ProfileCard = () => (
 );
 
 const AvailabilityCard = () => (
-  <Card className="col-span-3 row-span-1 bg-muted/35 flex flex-col p-2 justify-center">
+  <Card className="md:col-span-6 lg:col-span-3 row-span-1 flex flex-col p-2 justify-center herocard">
     <small className="text-muted-foreground mb-2 block text-center lg:text-left">
       My Availability Status,
     </small>
@@ -88,7 +88,7 @@ const AvailabilityCard = () => (
 
 const LocationCard = () => {
   return (
-    <Card className="col-span-2 bg-muted/35  row-span-1 flex flex-col p-2 justify-center ">
+    <Card className="md:col-span-4 lg:col-span-2  row-span-1 flex flex-col p-2 justify-center herocard">
       <small className="text-muted-foreground mb-2 block text-center lg:text-left">
         I&apos;m Based In,
       </small>
@@ -103,7 +103,7 @@ const LocationCard = () => {
 };
 
 const TechStackCard = () => (
-  <Card className="col-span-3 bg-muted/40 row-span-4 flex flex-col p-2 px-4 ">
+  <Card className="md:col-span-6 lg:col-span-3  md:row-span-1 lg:row-span-4 flex flex-col p-2 px-4 herocard">
     <h3 className="text-xl font-semibold">My Tech Stack</h3>
 
     <div className="flex w-full h-full  flex-col justify-around ">
@@ -126,7 +126,7 @@ const TechCategory = ({ title, tools }: { title: string; tools: tool[] }) => (
 );
 
 const About = () => (
-  <Card className="col-span-2 bg-muted/40 row-span-4 p-2">
+  <Card className="md:col-span-4 lg:col-span-2 md:row-span-1 lg:row-span-4 p-2 herocard">
     <h3 className="text-xl font-semibold">About Me</h3>
     <p className="tracking-widest leading-relaxed text-muted-foreground p-4 px-2">
       I am a passionate <span className="font-bold text-primary">Node.js</span>{" "}
@@ -144,7 +144,7 @@ const About = () => (
 );
 
 const Services = () => (
-  <Card className="col-span-5 bg-muted/40 row-span-2 p-4 w-full">
+  <Card className="md:col-span-10 lg:col-span-5 md:row-span-1 lg:row-span-2 p-4 w-full herocard">
     <h3 className="text-xl font-semibold mb-2">My Services</h3>
     <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
       {services.map((service, index) => (
