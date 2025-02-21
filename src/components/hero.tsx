@@ -113,7 +113,7 @@ const AvailabilityCard = () => (
 const LocationCard = () => {
   return (
     <motion.div
-      className="md:col-span-6 lg:col-span-2 row-span-1"
+      className="md:col-span-4 lg:col-span-2 row-span-1"
       initial={{ opacity: 0, y: 400 }}
       animate={{
         opacity: 1,
