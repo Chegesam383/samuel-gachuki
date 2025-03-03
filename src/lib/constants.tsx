@@ -8,10 +8,10 @@ import {
   SiNodedotjs,
   SiReactquery,
   SiDrizzle,
-  SiSupabase,
   SiGit,
   SiGithub,
   SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
 
 const size = 20;
@@ -48,8 +48,8 @@ export const backendTools = [
   },
 
   {
-    icon: <SiSupabase size={size} className="text-muted-foreground" />,
-    label: "Supabase",
+    icon: <SiPostgresql size={size} className="text-muted-foreground" />,
+    label: "Postgresql",
   },
 
   {

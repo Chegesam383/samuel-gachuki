@@ -47,14 +47,15 @@ const ProfileCard = () => (
     <Card className="p-4 flex flex-col h-full justify-between herocard">
       <div className="flex gap-4 flex-col items-center md:flex-row flex-wrap">
         <div className="flex-1">
-          <h1 className="text-lg mb-3 text-muted-foreground text-center md:text-left">
-            Hi <span className=" inline-block animate-wave ">👋</span> I am{" "}
-            <b className="gradient">Samuel</b> a,
+          <h1 className="text-sm mb-3 text-muted-foreground text-center md:text-left">
+            Hi! <span className="text-2xl inline-block animate-wave ">👋</span>{" "}
+            I am <span className="font- gradient text-md ">Samuel</span> a,
+            <br />
+            <span className="text-primary mb-2 text-xl text-center md:text-left md:max-w-[350px]">
+              Fullstack Web Developer
+            </span>
           </h1>
 
-          <p className="mb-2 gradient font-semibold tracking-wide text-xl text-center md:text-left md:max-w-[350px]">
-            Fullstack Web Developer
-          </p>
           <h6 className="text-5xl font-bold text-wrap tracking-tight my-5  text-center md:text-left">
             Let’s build that idea!
           </h6>
@@ -165,7 +166,7 @@ const TechStackCard = () => (
       <div className="flex w-full h-full gap-8 md:gap-0 flex-col justify-around ">
         <TechCategory title="Frontend tools" tools={frontendTools} />
         <TechCategory title="Backend tools" tools={backendTools} />
-        <TechCategory title="Tools & productivity" tools={tools} />
+        <TechCategory title="Fullstack/productivity" tools={tools} />
       </div>
     </Card>
   </motion.div>

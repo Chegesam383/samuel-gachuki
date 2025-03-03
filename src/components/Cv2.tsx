@@ -66,7 +66,7 @@ export default function CV() {
                 download
                 className="flex items-center gap-2"
               >
-                <Download /> Download{" "}
+                <Download /> Download
               </a>
             </Button>
           </div>
