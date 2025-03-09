@@ -17,10 +17,7 @@ export type tool = {
 const Hero = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 mt-24 lg:mt-28">
-      <motion.div
-        className="flex flex-col grid-flow-row-dense  md:grid gap-2 grid-cols-10 lg:grid-rows-5"
-        initial="hidden"
-      >
+      <motion.div>
         <ProfileCard />
         <LocationCard />
         <AvailabilityCard />
@@ -82,7 +79,7 @@ const ProfileCard = () => (
             />
           </Link>
         </Button>
-        <CV />{" "}
+        <CV />
       </div>
     </Card>
   </motion.div>
@@ -90,7 +87,7 @@ const ProfileCard = () => (
 
 const AvailabilityCard = () => (
   <motion.div
-    className="md:col-span-6 lg:col-span-3 row-span-1 mb-0"
+    className="md:col-span-5 lg:col-span-3 row-span-1 mb-0"
     initial={{ opacity: 0, y: 400 }}
     animate={{
       opacity: 1,
@@ -101,10 +98,10 @@ const AvailabilityCard = () => (
     }}
   >
     <Card className="flex flex-col p-4 px-2 h-full justify-center herocard">
-      <small className="text-muted-foreground mb-2 block text-center lg:text-left">
+      <small className="text-muted-foreground mb-2 block text-center md:text-left">
         My Availability Status,
       </small>
-      <div className="relative flex items-center gap-2 justify-center lg:justify-start">
+      <div className="relative flex items-center gap-2 justify-center md:justify-start">
         <div className="relative">
           <div className="h-2 w-2 bg-green-600 rounded-full relative">
             <span className="absolute inset-0 bg-green-600 rounded-full animate-ping"></span>
@@ -123,7 +120,7 @@ const AvailabilityCard = () => (
 const LocationCard = () => {
   return (
     <motion.div
-      className="md:col-span-4 lg:col-span-2 row-span-1"
+      className="md:col-span-5 lg:col-span-2 row-span-1"
       initial={{ opacity: 0, y: 400 }}
       animate={{
         opacity: 1,
@@ -134,10 +131,10 @@ const LocationCard = () => {
       }}
     >
       <Card className="flex flex-col p-4 px-2 h-full justify-center herocard">
-        <small className="text-muted-foreground mb-2 block text-center lg:text-left">
+        <small className="text-muted-foreground mb-2 block text-center md:text-left">
           I&apos;m Based In,
         </small>
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex justify-center md:justify-start">
           <p className="text-nowrap flex justify-center items-center">
             <MapPin className="mr-2 text-red-900" /> Toronto, CA
             <TimeDisplay gmtOffset={-5} />
@@ -150,7 +147,7 @@ const LocationCard = () => {
 
 const TechStackCard = () => (
   <motion.div
-    className="md:col-span-6 lg:col-span-3 h-full md:row-span-1 lg:row-span-4"
+    className="md:col-span-6 lg:col-span-3 h-full md:row-span-1 lg:row-span-4 mb-4"
     initial={{ opacity: 0, y: 400 }}
     animate={{
       opacity: 1,
@@ -163,7 +160,7 @@ const TechStackCard = () => (
     <Card className="flex flex-col p-2 h-full px-4 herocard">
       <h3 className="text-xl font-semibold">My Tech Stack</h3>
 
-      <div className="flex w-full h-full gap-8 md:gap-0 flex-col justify-around ">
+      <div className="flex w-full h-full gap-8 flex-col justify-around">
         <TechCategory title="Frontend tools" tools={frontendTools} />
         <TechCategory title="Backend tools" tools={backendTools} />
         <TechCategory title="Fullstack/productivity" tools={tools} />

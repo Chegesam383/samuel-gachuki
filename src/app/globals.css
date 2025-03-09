@@ -87,7 +87,7 @@ body {
     @apply bg-gradient-to-r  from-primary to-primary/50 text-transparent bg-clip-text;
   }
   .herocard {
-    @apply bg-muted/20 backdrop-blur rounded-xl lg:rounded-2xl;
+    @apply bg-muted/20 backdrop-blur rounded-xl;
   }
 }
 

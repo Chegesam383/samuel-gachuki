@@ -13,6 +13,7 @@ import {
   SiMongodb,
   SiPostgresql,
 } from "react-icons/si";
+import { RiBearSmileLine } from "react-icons/ri";
 
 const size = 20;
 
@@ -23,7 +24,7 @@ export const frontendTools = [
   },
   {
     icon: <SiReact size={size} className="text-muted-foreground" />,
-    label: "React js",
+    label: "React",
   },
 
   {
@@ -33,6 +34,11 @@ export const frontendTools = [
   {
     icon: <SiShadcnui className="text-muted-foreground" />,
     label: "Shadcn ui",
+  },
+
+  {
+    icon: <RiBearSmileLine className="text-muted-foreground" size={size} />,
+    label: "Zustand ",
   },
 ];
 

@@ -17,7 +17,10 @@ export function ModeToggle() {
   if (!mounted) return null; // Avoid rendering until the client mounts
 
   return (
-    <div onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}>
+    <div
+      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+      className="cursor-pointer"
+    >
       {currentTheme === "dark" ? (
         <Sun className="w-5 h-5" />
       ) : (
