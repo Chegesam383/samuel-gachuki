@@ -17,7 +17,10 @@ export type tool = {
 const Hero = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 mt-24 lg:mt-28">
-      <motion.div>
+      <motion.div
+        className="flex flex-col grid-flow-row-dense md:grid gap-2 grid-cols-10 lg:grid-rows-5"
+        initial="hidden"
+      >
         <ProfileCard />
         <LocationCard />
         <AvailabilityCard />

@@ -16,7 +16,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "E commerce Webapp",
-    image: "/fashion.jpeg",
+    image: "/fashionsence.jpeg",
     description:
       "A modern ecommerce platform with add to cart,checkout and authentication and authintication.",
     url: "https://fashioncom.vercel.app/",
