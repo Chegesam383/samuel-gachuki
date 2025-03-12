@@ -2,13 +2,13 @@ import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 import { Card } from "./ui/card";
-import Image from "next/image";
 import * as motion from "motion/react-client";
 interface Project {
   name: string;
   description: string;
   image: string;
   url: string;
+  video: string;
   gitUrl: string;
   technologies: string[];
 }
@@ -20,6 +20,7 @@ const projects: Project[] = [
     description:
       "A modern ecommerce platform with add to cart,checkout and authentication and authintication.",
     url: "https://fashioncom.vercel.app/",
+    video: "/out.mp4",
     gitUrl: "https://github.com/Chegesam383/Fashionsence",
 
     technologies: [
@@ -83,14 +84,22 @@ const Project = ({ project, index }: { project: Project; index: number }) => (
           </div>
         </div>
 
-        <div className=" w-full h-72 overflow-hidden mb-0">
-          <Image
+        <div className=" w-full h-72 overflow-hidden mb-0 border border-b-0 shadow-border shadow-border-b-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            src={project.video}
+            className="w-full h-full object-cover transition-all object-top rounded rounded-br-none rounded-bl-none hover:object-bottom"
+          ></video>
+          {/* <Image
             height={300}
             width={400}
             alt="project"
             src={project.image}
             className="w-full h-full object-cover transition-all object-top drop-shadow-lg rounded rounded-br-none rounded-bl-none hover:object-bottom"
-          />
+          /> */}
         </div>
       </div>
     </Card>
