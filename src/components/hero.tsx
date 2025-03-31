@@ -140,7 +140,7 @@ const LocationCard = () => {
         <div className="flex justify-center md:justify-start">
           <p className="text-nowrap flex justify-center items-center">
             <MapPin className="mr-2 text-red-900" /> Calgary, CA
-            <TimeDisplay gmtOffset={-10} />
+            <TimeDisplay timezone="America/Edmonton" />
           </p>
         </div>
       </Card>

@@ -20,7 +20,7 @@ const projects: Project[] = [
     description:
       "A modern ecommerce platform with add to cart,checkout and authentication and authintication.",
     url: "https://fashioncom.vercel.app/",
-    video: "/out.mp4",
+    video: "/fashionvideo.mp4",
     gitUrl: "https://github.com/Chegesam383/Fashionsence",
 
     technologies: [

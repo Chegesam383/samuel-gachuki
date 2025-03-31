@@ -2,28 +2,24 @@
 import { useState, useEffect } from "react";
 
 type TimeDisplayProps = {
-  gmtOffset: number;
+  timezone: string;
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ gmtOffset }) => {
+const TimeDisplay: React.FC<TimeDisplayProps> = ({ timezone }) => {
   const getFormattedTime = (): string => {
-    const now = new Date();
-    const utcTime = new Date(
-      now.getUTCFullYear(),
-      now.getUTCMonth(),
-      now.getUTCDate(),
-      now.getUTCHours() + gmtOffset,
-      now.getUTCMinutes(),
-      now.getUTCSeconds()
-    );
-
-    // Get formatted time (12-hour format)
-    let hours = utcTime.getHours();
-    const minutes = utcTime.getMinutes().toString().padStart(2, "0");
-    const amPm = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12 || 12; // Convert 24-hour to 12-hour format
-
-    return `${hours}:${minutes} ${amPm}`;
+    try {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: timezone,
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+      };
+      return new Intl.DateTimeFormat("en-US", options).format(now);
+    } catch (error) {
+      console.error("Error formatting time:", error);
+      return "Invalid Timezone";
+    }
   };
 
   const [time, setTime] = useState(getFormattedTime());
@@ -31,16 +27,16 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ gmtOffset }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(getFormattedTime());
-    }, 1000); // Update every minute
+    }, 1000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [gmtOffset]);
+    return () => clearInterval(interval);
+  }, [timezone]);
 
   return (
-    <small className="text-[10px] text-muted-foreground  text-nowrap text-center ">
+    <small className="text-[10px] text-muted-foreground text-nowrap text-center mt-1">
       <span className="inline lg:hidden"> &nbsp;Current Time:</span>
       &nbsp;{time}&nbsp;
-      <span className="inline lg:hidden xl:inline">({gmtOffset}UTC)</span>
+      {/* <span className="inline lg:hidden xl:inline">({timezone})</span> */}
     </small>
   );
 };
